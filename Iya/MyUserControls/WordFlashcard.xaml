@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="Iya.MyUserControls.WordFlashcard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Iya.MyUserControls"
+             mc:Ignorable="d"
+             d:DesignWidth="640" d:DesignHeight="480" Background="Black">
+
+    <Border BorderThickness="1" BorderBrush="Gainsboro">
+        <StackPanel>
+            <!--
+            Structure of the Flashcard for words:
+            First: the word
+            Second: the kanjis of that word if any plus the readings
+            Third: other forms of the word if any plus the readings
+            Fourth: tiles that contain info about the attributes of the word
+            Fifth: the JLPT level of the word
+            Sixth: the meanings of the word
+            Seventh: the comment about the word
+            -->
+            
+            <TextBlock Margin="10,10,10,5" Name="tblWord" FontSize="30" Foreground="Khaki"/>
+            
+            <!--Colored in code-behind, despite this is content, the FontSize will be 26-->
+            <TextBlock Margin="10,0,10,10" Name="tblKanjiReadingsContent" FontSize="26" TextWrapping="Wrap" Foreground="DarkGray"/>
+
+            <TextBlock Margin="10,0,10,5" Name="tblOtherFormsTitle" FontSize="26" Foreground="WhiteSmoke">Otras formas</TextBlock>
+            <!--Colored in code-behind-->
+            <TextBlock Margin="10,0,10,10" Name="tblOtherFormsContent" FontSize="22" TextWrapping="Wrap" Foreground="DarkGray"/>
+            
+            <!--*** Beginning of attributes ***-->
+            <TextBlock Margin="10,0,10,5" Name="tblAttributesTitle" FontSize="26" Foreground="WhiteSmoke">Atributos</TextBlock>
+
+            <TextBlock Margin="10,0,10,10" Name="tblJlptLevel" FontSize="22" Foreground="DarkGray"/>
+            <!--*** End of attributes ***-->
+
+            <TextBlock Margin="10,0,10,5" Name="tblMeaningsTitle" FontSize="26" Foreground="WhiteSmoke">Significados</TextBlock>
+            <TextBlock Margin="10,0,10,10" Name="tblMeaningsContent" FontSize="22" TextWrapping="Wrap" Foreground="DarkGray"/>
+
+            <TextBlock Margin="10,0,10,5" Name="tblCommentTitle" FontSize="26" Foreground="WhiteSmoke">Comentario</TextBlock>
+            <TextBlock Margin="10,0,10,10" Name="tblCommentContent" FontSize="22" TextWrapping="Wrap" Foreground="DarkGray"/>
+        </StackPanel>
+    </Border>
+</UserControl>

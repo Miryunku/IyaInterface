@@ -1,0 +1,56 @@
+﻿<Page x:Class="Iya.MyPages.CollectionsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Iya.MyPages"
+      mc:Ignorable="d"
+      d:DesignWidth="800" d:DesignHeight="600" Background="Black">
+    <Page.Resources>
+    </Page.Resources>
+
+    <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Margin="10,10,10,5"  Orientation="Horizontal" VerticalAlignment="Top">
+                <TextBox MinWidth="150" Name="tbxUsername" MaxLength="10" Style="{StaticResource TbxStyle}"></TextBox>
+                <Button Margin="10,0,10,0" Name="btnLogin" Click="btnLogin_Click" Style="{StaticResource BtnStyle}">Iniciar Sesión</Button>
+                <Button Name="btnLogout" Click="btnLogout_Click" Style="{StaticResource BtnStyle}">Cerrar Sesión</Button>
+                <Button Margin="10,0,10,0" Name="btnManageUsers" Click="btnManageUsers_Click" Style="{StaticResource BtnStyle}">Gestionar usuarios</Button>
+                <Button Name="btnOpenDictionary" Click="btnOpenDictionary_Click" Style="{StaticResource BtnStyle}">Diccionario</Button>
+            </StackPanel>
+
+            <TextBlock Grid.Row="1" Margin="10,0,10,5" Name="tblInfo" Foreground="{StaticResource TblFgColor}"/>
+
+            <StackPanel Grid.Row="2" Margin="10,0,10,10" Orientation="Horizontal" VerticalAlignment="Top">
+                <Button Name="btnDelete" Click="btnDelete_Click" Style="{StaticResource BtnStyle}">Eliminar colección</Button>
+                <Button Margin="10,0" Name="btnAdd" Click="btnAdd_Click" Style="{StaticResource BtnStyle}">Agregar colección</Button>
+                <Button Margin="0,0,10,0" Name="btnEdit" Click="btnEdit_Click" Style="{StaticResource BtnStyle}">Editar colección</Button>
+                <Button Name="btnStudy" Click="btnStudy_Click" Style="{StaticResource BtnStyle}">Estudiar</Button>
+            </StackPanel>
+
+            <TextBlock Grid.Row="3" Margin="10,0,10,5" Foreground="{StaticResource TblFgColor}">Tus colecciones: Componentes</TextBlock>
+
+            <StackPanel Grid.Row="4" Margin="10,0,10,10" Name="stkComponentCollections"/>
+            
+            <TextBlock Grid.Row="5" Margin="10,0,10,5" Foreground="{StaticResource TblFgColor}">Tus colecciones: Kanji</TextBlock>
+
+            <StackPanel Grid.Row="6" Margin="10,0,10,10" Name="stkKanjiCollections"/>
+
+            <TextBlock Grid.Row="7" Margin="10,0,10,5" Foreground="{StaticResource TblFgColor}">Tus colecciones: Palabras</TextBlock>
+
+            <StackPanel Grid.Row="8" Margin="10,0,10,10" Name="stkWordCollections"/>
+        </Grid>
+    </ScrollViewer>
+</Page>

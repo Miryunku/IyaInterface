@@ -1,0 +1,38 @@
+Remember, the table 'words' in Iya originally had 29 columns.
+
+ADD SUPPORT FOR COMPONENT SEARCH AND FLASHCARD STUDY.
+WORDS WITH SAME PRONUNCIATION ARE NOT SingleOrDefault
+CATCH EXCEPTIONS AND ADD A LOG
+MAKE THE TEXTBLOCKS SELECTABLE IN MyUserControls
+Add textblock that shows the quantity of items fetched in dictionary.
+Add textlblock that shows the quantity of items while adding the in the collection.
+- - - - -
+CHANGE EVERY SYNC FUNCTION CALL TO AN ASYNC FUNCTION CALL
+A COLLECTION CANNOT HAVE A SIZE OF 0, UPDATE THE CODE TO REMOVE UNNECESSARY CHECKING
+REMOVE OLD CODE FROM COMMENTS
+REPLACE string.IsNullOrEmpty WITH string.IsNullOrWhiteSpace WHERE APPLIES.
+
+Validation:
+    > Verify that the input of the TextBox'es in AddWordWindow.xaml.cs
+        conforms to the required patterns: c;c;c;c;c
+    > Set TextBox.MaxLength for every TextBox.
+
+Error handling
+    > Catch the exceptions that can occur when querying against the database
+        and handle them.
+
+App consistency
+    > Set the value of Window.Title property for every Window.
+
+Layout
+    > I still haven't checked the layout of the user controls.
+
+Coloring
+    > Make ListBoxes and ComboBoxes dark themed.
+
+Optimization:
+    > Don't add objects to the cache system if the object is already in cache.
+
+Features:
+    > Make an "Export as" option for the flashcards
+        Supported formats: Iya, Anki, Kanshudo.

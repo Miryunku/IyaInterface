@@ -1,0 +1,39 @@
+﻿<Window x:Class="Iya.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Iya"
+        mc:Ignorable="d"
+        Title="Iya" Width="800" Height="600" MinWidth="800" MinHeight="600" Background="Black">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.ZIndex="0" Stretch="Fill" Source="pack://siteoforigin:,,,/MikuHatsune.jpg"/>
+        
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.ZIndex="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBox MinWidth="150" Name="tbxUsername" MaxLength="10" Style="{StaticResource TbxStyle}"></TextBox>
+            <Button Margin="10,0,10,0" Name="btnLogin" Click="btnLogin_Click" Style="{StaticResource BtnStyle}">Iniciar Sesión</Button>
+            <Button Margin="0,0,10,0" Name="btnLogout" Click="btnLogout_Click" Style="{StaticResource BtnStyle}">Cerrar Sesión</Button>
+            <Button Name="btnManageUsers" Click="btnManageUsers_Click" Style="{StaticResource BtnStyle}">Gestionar usuarios</Button>
+        </StackPanel>
+
+        <Button Grid.Row="1" Grid.Column="0" Margin="1" Name="btnCreateJlptKanjiCollections" IsEnabled="False">Crear colecciones JLPT kanji</Button>
+        <!-- Some day... maybe, perhaps, probably -->
+        <Button Grid.Row="1" Grid.Column="1" Margin="1" Name="btnCreateJlptWordsCollections" IsEnabled="False">Crear colecciones JLPT palabras</Button>
+
+        <Button Grid.Row="2" Grid.Column="0" Margin="1" Name="btnMyCollections" IsEnabled="False" Click="btnMyCollections_Click">Mis colecciones</Button>
+        <Button Grid.Row="2" Grid.Column="1" Margin="1" Name="btnOpenDictionary" Click="btnOpenDictionary_Click">Diccionario</Button>
+
+        <Image Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Stretch="Fill" Source="pack://siteoforigin:,,,/YukariYuzuki.jpg"/>
+    </Grid>
+</Window>

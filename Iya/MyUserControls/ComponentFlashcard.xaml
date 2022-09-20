@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="Iya.MyUserControls.ComponentFlashcard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Iya.MyUserControls"
+             mc:Ignorable="d"
+             d:DesignWidth="640" d:DesignHeight="480" Background="Black">
+    
+    <Border BorderThickness="1" BorderBrush="Gainsboro">
+        <StackPanel>
+            <!--
+            Structure of the flashcard for components:
+            First: the component
+            Second: the meaning of the component
+            Third: is the component's meaning a custom meaning?
+            Fourth: is the component's meaning lost?
+            Fifth: is the component a kanji by itself?
+            -->
+
+            <TextBlock Margin="10,10,10,10" Name="tblComponent" FontSize="30" Foreground="Khaki"/>
+
+            <TextBlock Margin="10,0,10,5" Name="tblMeaningTitle" FontSize="26" Foreground="WhiteSmoke">Significado</TextBlock>
+            <TextBlock Margin="10,0,10,10" Name="tblMeaningContent" FontSize="22" Foreground="DarkGray"/>
+
+            <!--*** Beginning of attributes ***-->
+            <TextBlock Margin="10,0,10,5" Name="tblAttributesTitle" FontSize="26" Foreground="WhiteSmoke">Atributos</TextBlock>
+            
+            <TextBlock Margin="10,0,10,5" Name="tblCustomMeaning" FontSize="22" Foreground="DarkGray"/>
+
+            <TextBlock Margin="10,0,10,5" Name="tblMeaningLost" Visibility="Collapsed" FontSize="22" Foreground="DarkGray"/>
+
+            <TextBlock Margin="10,0,10,10" Name="tblIsKanji" FontSize="22" Foreground="DarkGray"/>
+            <!--*** End of attributes ***-->
+        </StackPanel>
+    </Border>
+</UserControl>
